@@ -1,0 +1,23 @@
+# 所有文本文件统一用 LF 存储，检出时按平台自动转换
+* text=auto eol=lf
+
+# Windows 批处理必须是 CRLF，否则某些情况下会解析异常
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# 明确标记为二进制，避免被当成文本处理
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.exe binary
+*.dll binary
+*.pdb binary
+*.asar binary
+
+# SVG 是文本，但不要做 diff（体积大且无意义）
+*.svg text -diff
+
+# 生成物不参与语言统计
+package-lock.json linguist-generated=true
+src/renderer/src/assets/brands/*.svg linguist-generated=true

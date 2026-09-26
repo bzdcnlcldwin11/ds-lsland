@@ -1,0 +1,22 @@
+# 依赖与构建产物
+node_modules/
+out/
+resources/bridge/
+native/IslandBridge/bin/
+native/IslandBridge/obj/
+
+# 构建缓存
+*.tsbuildinfo
+
+# 本地 npm 配置（可能含国内镜像地址，不应强加给克隆者）
+.npmrc
+
+# 本地设置与日志（绝不提交）
+*.log
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
